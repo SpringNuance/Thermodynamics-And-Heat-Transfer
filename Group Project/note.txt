@@ -1,0 +1,49 @@
+HRR
+Heat release rate is the function of viscosity, density, calorific value, latent heat of fuels 
+and burning velocity of fuels, and combustion temperature. The heat release rate consists of premixed 
+combustion, controlled combustion, and late combustion.
+
+CHR
+compression heat radiator 
+
+IMEP
+The Indicated Mean Effective Pressure is the average pressure, that induced in the 
+combustion chamber during the complete thermodynamic cycle in Internal Combustion engines.
+
+Equivalence ratio
+CAD: Crank Angle Degree
+BTDC: Before Top Dead Center
+SOI: Start of Injection
+
+Hello Professor Cheng, 
+Right now, we are doing post-processing steps and there are many MATLAB files and folders that we found hard to keep track of. So far, there are these files:
+Folder MatlabCode: having the files CHR_IMEP_Calculation, HRR_Calculation, ReadtextforLEOI and Plot_P_HRR_CHR_dP
+Folder ExperimentalData(forlearning): having the files 202001091544-TriF_EngTestT1 to 202001091544-TriF_EngTestT5
+Folder 20220310-Group-Project-Matfile: which is the folder you sent via Funet, having files Test_20220310_0001 to Test_20220310_0025
+And finally the .m file ReadMatfile_Calculate_HRR_CHR_IMEP which calculates heat released rate, compression heat radiator and Indicated Mean Effective Pressure
+At the start of this .m file, there is this line:
+addpath '\\home.org.aalto.fi\chengq1\data\Desktop\Engine Study\Matlab_PostProcessing\natsortfiles' % reorder your cases
+However, we do not have any files called natsortfiles at all in the folders above, and we cannot run this file. When I choose any folder, it reports an error
+In ReadMatfile_Calculate_HRR_CHR_IMEP (line 1) 
+Unrecognized function or variable 'natsortfiles'.
+
+Can you please instruct us on how to set up the working environment, what we generally need to do in this post processing stage? 
+And, what should we report in the end? Is it that we must fill in the three columns, Energy 1, Energy 2 and Total Energy in the Project Tasks.xlsx for the 5 tests, each test has 5 different cases? 
+
+We look forward to hearing from you,
+BR, Xuan Binh
+
+
+
+For your questions, my answers are below:
+
+1)	Now you don’t need to care about my previous Matlab code: CHR_IMEP_Calculation, HRR_Calculation, ReadtextforLEOI and Plot_P_HRR_CHR_dP
+2)	And also, Folder ExperimentalData(forlearning). Skip this folder.
+3)	you should select your task in Folder 20220310-Group-Project-Matfile. Discuss with your group member, make sure everyone has a different task.
+4)	You can directly get the heat release rate, cumulative heat release, indicated mean effective pressure from ReadMatfile_Calculate_HRR_CHR_IMEP.m
+5)	You need to compare the difference in heat release rate with my code and Dewesoft results.
+6)	And also, you need to explain how do the parameters affect the engine performances. 
+7)	addpath '\\home.org.aalto.fi\chengq1\data\Desktop\Engine Study\Matlab_PostProcessing\natsortfiles' % reorder your cases. 
+	Here you need to change the path to your folder which contains the [natsortfiles]folder. You need to extract it and put it somewhere. 
+	Then copy the path and replace the path of this '\\home.org.aalto.fi\chengq1\data\Desktop\Engine Study\Matlab_PostProcessing\natsortfiles'
+
